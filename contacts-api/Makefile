@@ -1,9 +1,9 @@
 .PHONY: run test up down fmt
 run:
-\tuvicorn app.main:app --reload
+uvicorn app.main:app --reload
 test:
-\tpytest -q
+pytest -q
 up:
-\tdocker compose up --build -d
+docker compose up --build -d
 down:
-\tdocker compose down -v
+docker compose down -v
