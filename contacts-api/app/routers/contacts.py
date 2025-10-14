@@ -106,8 +106,8 @@ def list_contacts(
         logger.debug(f"Applied search filter: {like}")
     
     if tag:
-        q = q.filter(models.Contact.tags.op("JSON_CONTAINS")(f'["{tag}"]'))
-        logger.debug(f"Applied tag filter: {tag}")
+        q = q.filter(models.Contact.tags.op("JSON_CONTAINS")(f'{tag}'))
+        logger.info(f"Applied tag filter: {tag}")
     
     results = q.offset(offset).limit(limit).all()
     logger.info(f"Found {len(results)} contacts")
