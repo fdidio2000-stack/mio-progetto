@@ -201,16 +201,3 @@ All external calls are isolated and mockable in tests.
 - Switch DB to PostgreSQL for production
 - Swagger auth & environment support
 
-# 🧑‍💻 Author
-Made with ❤️ by [Your Name] — open to contributions, ideas, and pull requests.
-```
-
-Fammi sapere se vuoi:
-
-- una versione in italiano 🇮🇹
-- una versione con badge CI/CD (GitHub Actions, ecc.)
-- il file in formato PDF/Word
-- l’upload automatico su GitHub
-
-
-```
