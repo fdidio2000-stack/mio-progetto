@@ -4,6 +4,8 @@ from sqlalchemy.orm import Session
 from ..db import get_db, Base, engine
 from .. import crud, schemas, models
 from ..services.enrich import gravatar_url, check_avatar_exists
+from sqlalchemy import text
+import json
 
 # Logging setup
 logging.basicConfig(level=logging.DEBUG)
