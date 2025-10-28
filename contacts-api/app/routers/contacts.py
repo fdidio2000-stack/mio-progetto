@@ -109,7 +109,10 @@ def list_contacts(
     
     if tag:
         q = q.filter(models.Contact.tags.like(f'%"{tag}"%'))
-        logger.info(f"Applied tag filter: {tag}")
+    else:
+        q = q.filter(False)  # Nessun risultato
+
+
     
     results = q.offset(offset).limit(limit).all()
     logger.info(f"Found {len(results)} contacts")
